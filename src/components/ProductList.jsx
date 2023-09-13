@@ -1,7 +1,6 @@
-import { useEffect, useState } from 'react'
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
-import { useOutlet, useOutletContext } from 'react-router-dom';
+import {  useOutletContext } from 'react-router-dom';
 export default function ProductList() {
 
     const products = useOutletContext();
