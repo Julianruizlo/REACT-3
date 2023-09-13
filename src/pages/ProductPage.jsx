@@ -4,9 +4,11 @@ import { Outlet } from "react-router-dom";
 function ProductPage() {
     const [products, setProducts] = useState([{}]);
     useEffect(() => {
-        fetch("../data/products.json").then(response => response.json()).then(response => setProducts(response));
+        getData();
     });
-
+    const getData = () => {
+        fetch("productsData.json").then(response => response.json()).then(json => setProducts(json));
+    }
     return ( 
         <>
             <h1>Product Page</h1>
